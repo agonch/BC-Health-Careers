@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BC Health Careers Club</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.6.1/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.6.1/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.6.1/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.6.1/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.6.1/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.6.1/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.6.1/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.6.1/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.6.1/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.6.1/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <style>
+      body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+      body {font-size:16px;}
+      .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+      .w3-half img:hover{opacity:1}
+      </style>
+  </head>
+  <body>
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+      <div class="w3-container">
+        <h3 class="w3-padding-64"><b>BC Health<br>Careers Club</b></h3>
+      </div>
+      <div class="w3-bar-block">
+        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About</a> 
+        <a href="#officers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Officers</a> 
+        <a href="#events" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Events</a> 
+        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+      </div>
+    </nav>
+    
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+    
+      <!-- About -->
+      <div class="w3-container" style="margin-top:80px" id="about">
+        <h1 class="w3-xxxlarge w3-text-blue"><b>About.</b></h1>
+      </div>
+      <div class="w3-row-padding">
+          <div class="w3-half">
+          <p>The Bellevue College (BC) Health Careers Club is aimed to build and maintain bridges between students, medical professionals, and the local healthcare community.</p>
+          <p>This group intends to serve students in all grade levels (running start, undergrad, postbac, etc.) by providing opportunities to connect with each other, guest speakers, and prepare for future careers in different healthcare fields.</p>
+        </div>
+        <div class="w3-half">
+          <img src="https://images.squarespace-cdn.com/content/v1/5908027c20099e374ad3d70e/1498494128707-TRJS4M41GRHAGRH4IHSV/staff-of-aesclepius.jpg?format=1500w" style="width:20%" alt="Health Careers Club">
+        </div>
+      </div>
+      
+      <!-- Officers -->
+      <div class="w3-container" id="officers" style="margin-top:75px">
+        <h1 class="w3-xxxlarge w3-text-blue"><b>Officers.</b></h1>
+      </div>
+      <div class="w3-row-padding w3-grayscale">
+        <div class="w3-col m4 w3-margin-bottom">
+          <div class="w3-light-grey">
+            <img src="./team2.jpg" alt="Co-President1" style="width:100%">
+            <div class="w3-container">
+              <h3>Claudia Covelli</h3>
+              <p class="w3-opacity">Co-Preisdent</p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col m4 w3-margin-bottom">
+          <div class="w3-light-grey">
+            <img src="./team2.jpg" alt="Primary Advisor" style="width:100%">
+            <div class="w3-container">
+              <h3>Reza Forough</h3>
+              <p class="w3-opacity">Primary Advisor</p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col m4 w3-margin-bottom">
+          <div class="w3-light-grey">
+            <img src="./anton.jpg" alt="Public Relations Chair" style="width:100%">
+            <div class="w3-container">
+              <h3>Anton Goncharenko</h3>
+              <p class="w3-opacity">Public Relations Chair</p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col m4 w3-margin-bottom">
+          <div class="w3-light-grey">
+            <img src="./team2.jpg" alt="Co-Preisdent2" style="width:100%">
+            <div class="w3-container">
+              <h3>Chloe Lawrence</h3>
+              <p class="w3-opacity">Co-president</p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col m4 w3-margin-bottom">
+          <div class="w3-light-grey">
+            <img src="./team2.jpg" alt="VP" style="width:100%">
+            <div class="w3-container">
+              <h3>Jory Hamilton</h3>
+              <p class="w3-opacity">Vice President</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Events calendar -->
+      <div class="w3-container" id="events" style="margin-top:75px">
+        <h1 class="w3-xxxlarge w3-text-blue"><b>Events.</b></h1>
+      </div>
+      <div class="w3-row-padding">
+        <div class="w3-half w3-margin-bottom">
+          <ul class="w3-ul w3-light-grey w3-center">
+            <li class="w3-dark-grey w3-xlarge w3-padding-32">Upcoming guest speakers</li>
+            <li class="w3-padding-16"><strike>January 1</strike></li>
+            <li class="w3-padding-16">January 2</li>
+            <li class="w3-padding-16">...</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Contact -->
+      <div class="w3-container" id="contact" style="margin-top:75px">
+        <h1 class="w3-xxxlarge w3-text-blue"><b>Contact.</b></h1>
+        <p>Are you a student interested in our student-run organization and want to get involved?</p>
+        <p>Or are you a health professional interested and willing to share more about your career and accomplishments?</p>
+        <p>Email us at <b>EMAIL.com</b> to discuss topics, we love meeting new people!</p>  
+      </div>
+    
+    <!-- End page content -->
+    </div>
+    
+    <!-- W3.CSS Container -->
+    <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+    
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
+</html>
