@@ -8,6 +8,7 @@ firebase-debug.log*
 firebase-debug.*.log*
 
 # Firebase cache
+.firebase-tools-instant-win.exe
 .firebase/
 
 # Firebase config
