@@ -6,9 +6,9 @@ yarn-debug.log*
 yarn-error.log*
 firebase-debug.log*
 firebase-debug.*.log*
+firebase-tools-instant-win.exe
 
 # Firebase cache
-.firebase-tools-instant-win.exe
 .firebase/
 
 # Firebase config
